@@ -31,7 +31,23 @@ class MyAppBar extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Text('This is the body Area'),
+        child: Container(
+          padding: EdgeInsets.all(20.0),
+          child: Banner(
+            message: "New Arriaval",
+            location: BannerLocation.topStart,
+            child: Container(
+              height: 200.0,
+              width: 200.0,
+              color: Colors.greenAccent,
+              child: Center(
+                  child: Text(
+                'New Item',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              )),
+            ),
+          ),
+        ),
       ),
     );
   }
